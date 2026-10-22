@@ -12,7 +12,7 @@ license = {text = "MIT"}
 dependencies = ["matrix-synapse>=1.109.0,<2"]
 
 [project.optional-dependencies]
-test = ["pytest>=8", "pytest-asyncio>=0.23"]
+test = ["pytest>=8", "pytest-asyncio>=0.23", "requests>=2.31"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
