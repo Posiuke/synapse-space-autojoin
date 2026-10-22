@@ -1,0 +1,23 @@
+name: Tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - python: '3.10'
+            synapse: 'matrix-synapse==1.109.0'
+          - python: '3.12'
+            synapse: 'matrix-synapse>=1.109.0,<2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e '.[test]' '${{ matrix.synapse }}'
+      - run: python -m pytest -q
+        env:
+          SPACE_AUTOJOIN_INTEGRATION: "1"

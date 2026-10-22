@@ -1,0 +1,7 @@
+# Add this entry to your existing modules list.
+modules:
+  - module: synapse_space_autojoin.SpaceAutoJoin
+    config:
+      inviter: '@space-autojoin:example.org'
+      recursive: true
+      max_rooms: 1000
