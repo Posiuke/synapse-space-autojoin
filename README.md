@@ -14,6 +14,23 @@ Das Modul akzeptiert **nicht** die ursprüngliche Space-Einladung. Dafür kann
 separat Synapses `auto_accept_invites` verwendet werden. Für die vom Modul
 veranlassten Raumbeitritte ist diese globale Einstellung nicht erforderlich.
 
+## Download
+
+**[Fertiges Python-Modul herunterladen (.whl, v0.1.0)](https://github.com/Posiuke/synapse-space-autojoin/releases/download/v0.1.0/synapse_space_autojoin-0.1.0-py3-none-any.whl)**
+
+Alternativ: [Quellpaket (.tar.gz)](https://github.com/Posiuke/synapse-space-autojoin/releases/download/v0.1.0/synapse_space_autojoin-0.1.0.tar.gz)
+oder [alle Releases](https://github.com/Posiuke/synapse-space-autojoin/releases).
+
+Das Wheel ist das fertige installierbare Python-Paket. Nach dem Download im
+Synapse-Virtualenv installieren (Pfade an eure Installation anpassen):
+
+```bash
+/opt/synapse/venv/bin/python -m pip install ./synapse_space_autojoin-0.1.0-py3-none-any.whl
+```
+
+Anschließend die unten beschriebene Modulkonfiguration ergänzen und Synapse neu
+starten. Alternativ lässt sich das Wheel direkt per URL installieren, siehe unten.
+
 ## Voraussetzungen
 
 - Synapse ab 1.109.0, Python ab 3.10.
@@ -38,7 +55,7 @@ Im selben Virtualenv installieren, in dem Synapse läuft, beispielsweise:
 
 ```bash
 /opt/synapse/venv/bin/python -m pip install \
-  'git+https://github.com/Posiuke/synapse-space-autojoin.git@v0.1.0'
+  'https://github.com/Posiuke/synapse-space-autojoin/releases/download/v0.1.0/synapse_space_autojoin-0.1.0-py3-none-any.whl'
 ```
 
 Den Pfad an eure Installation anpassen. Anschließend den folgenden Eintrag zur
